@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Factor from './components/factor/Factor';
+import OurServices from './components/ourServices/ourServices';
+import Portfolio from './components/Portfolio/portfolio';
+import Skills from './components/skills/skills';
+import StartAbout from './components/startAbout/startAbout';
+import StartBanner from './components/startBanner/startBanner';
+import TeamArea from './components/teamArea/teamArea';
+import Footer from './navigation/Footer';
+import Navbar from './navigation/Navbar';
+import ProgressBar from "bootstrap-progress-bar";
 
 function App() {
+  let now = 60;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+       
+        <StartBanner/>
+        <OurServices/>
+        
+        <div className='progressBar'>
+           <ProgressBar  width={500} now={now}  message="70%" />
+        </div>
+        <StartAbout/>
+        <OurServices/>
+
+        <Portfolio/>
+        <TeamArea/>
+        <Factor/>
+        <Skills/>
+      <Footer/>
     </div>
   );
 }
