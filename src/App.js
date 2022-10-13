@@ -2,6 +2,18 @@ import React, { useState } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logoWeb from './assets/images/anath.png'
+import actia from './assets/images/actia.png'
+import anath from './assets/images/anath.png'
+import cetem from './assets/images/cetem.png'
+import eniso from './assets/images/eniso.png'
+import hopitalMilitaire from './assets/images/hopitalMilitaire.jpg'
+import ministereDeSante from './assets/images/ministereDeSante.png'
+import novationCity from './assets/images/novationCity.jpg'
+import ordreNationaldesMedecins from './assets/images/ordreNationaldesMedecins.jpg'
+import sofap from './assets/images/sofap.jpg'
+import unimed from './assets/images/unimed.png'
+import enim from './assets/images/enim.png'
+import medecineSfax from './assets/images/medecineSfax.jpg'
 import mediwaveVideo from './assets/video/mediwaveVideo2_1~1.mp4'
 import doc from './assets/video/doc.mp4'
 import ReactBootstrapCarousel from 'react-bootstrap-carousel'
@@ -413,14 +425,14 @@ const App = () => {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="row">
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-6 col-md-6 ">
                   <div className="process-box card border-0 mt-5">
                     <div className="process-icon flex-shrink-0 me-3">
                       <i className="mdi mdi-lightning-bolt"></i>
                     </div>
                     <div>
                       <h5>Exonération de l’Impôt sur les sociétés :</h5>
-                      <p className="mt-2 mb-0 text-muted">
+                      <p className="mt-2 mb-0 text-muted mb-4">
                         Les startups sont exemptées de l'impôt sur les sociétés
                       </p>
                     </div>
@@ -448,7 +460,7 @@ const App = () => {
                     </div>
                     <div>
                       <h5>La réduction d'impôt pour l'investisseur :</h5>
-                      <p className="mt-2 mb-0 text-muted">
+                      <p className="mt-2 mb-0 text-muted mb-4">
                         Les montants investis par des personnes physiques ou
                         morales dans des startups ou dans des organismes
                         d'investissement réglementés dédiés aux startups, sont
@@ -457,7 +469,7 @@ const App = () => {
                     </div>
                   </div>
                 </div>
-               
+
                 <div className="col-lg-6 col-md-6">
                   <div className="process-box card border-0 mt-5">
                     <div className="process-icon flex-shrink-0 me-3">
@@ -475,8 +487,6 @@ const App = () => {
                     </div>
                   </div>
                 </div>
-                
-                
               </div>
             </div>
           </div>
@@ -2751,12 +2761,40 @@ const App = () => {
       {/* Investors */}
       <div className="container">
         <div className="row">
-          <div className="col-12">
-            <ul className="text-center">
-              <li>
-                <img />
-              </li>
-            </ul>
+          <div className="col-2">
+            <img src={actia} className="investorImage" style={{marginTop:"20%",marginBottom:"20%", height:"30%"}} />
+          </div>
+          <div className="col-2">
+            <img src={cetem} className="investorImage" style={{height:"150px"}}/>
+          </div>
+          <div className="col-2">
+            <img src={enim} className="investorImage" />
+          </div>
+          <div className="col-2">
+            <img src={eniso} className="investorImage"  style={{height:"150px"}}/>
+          </div>
+          <div className="col-2">
+            <img src={hopitalMilitaire} className="investorImage"  style={{height:"150px"}}/>
+          </div>
+          <div className="col-2">
+            <img src={medecineSfax} className="investorImage" style={{marginTop:"10%",marginBottom:"20%", height:"60%"}}/>
+          </div>
+        </div>
+        <div className="row d-flex justify-content-center">
+          <div className="col-2">
+            <img src={ministereDeSante} className="investorImage" style={{height:"150px"}}/>
+          </div>
+          <div className="col-2">
+            <img src={novationCity} className="investorImage"/>
+          </div>
+          <div className="col-2">
+            <img src={ordreNationaldesMedecins} className="investorImage" />
+          </div>
+          <div className="col-2">
+            <img src={sofap} className="investorImage" style={{marginTop:"10%",marginBottom:"20%", height:"60%"}}/>
+          </div>
+          <div className="col-2">
+            <img src={unimed} className="investorImage" style={{marginTop:"10%",marginBottom:"20%", height:"60%"}} />
           </div>
         </div>
       </div>
