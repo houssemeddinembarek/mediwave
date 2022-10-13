@@ -30,19 +30,10 @@ const App = () => {
     document.documentElement.scrollTop = 0
   }
   let now = 60
-  const [num, setNum] = useState(30)
-  // const state = {
-  //   scrollStatus: true,
-  // }
-
-  // const onVisibilityChange = (isVisible) => {
-  //   if (isVisible) {
-  //     if (state.scrollStatus) {
-  //       startAnimation(this.myCountUp)
-  //       this.setState({ scrollStatus: false })
-  //     }
-  //   }
-  // }
+  const [num, setNum] = useState(500000)
+  const [leve, setLeve] = useState(0)
+  const [action, setAction] = useState('18,7')
+  const [evaluation, setEvaluation] = useState(11520000)
 
   return (
     <div>
@@ -204,6 +195,7 @@ const App = () => {
         </div>
       </div> */}
 
+      {/* First Part carousel  OK */}
       <Carousel>
         <video className="video mediwaveVideo" loop autoPlay muted>
           <source src={mediwaveVideo} type="video/mp4" />
@@ -246,6 +238,7 @@ const App = () => {
         </Carousel.Caption>
       </Carousel>
 
+      {/* button Three arrows  OK */}
       <div className="container-fluid">
         <div className="row">
           <div className="home-shape-arrow">
@@ -260,20 +253,20 @@ const App = () => {
         </div>
       </div>
 
-      {/* <section className="section cta-2">
-        <div className="bg-overlay"></div> */}
-
-      {/* partie2 numbers animation */}
+      {/* partie2 numbers animation  OK */}
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-3 col-md-4">
             <div className="mt-5 text-center">
-              <p className="cta-text" style={{ color: '#505050' }}>
-                Investment Projects
+              <p
+                className="cta-text"
+                style={{ color: '#505050', fontWeight: 'bold' }}
+              >
+                Objectif :
               </p>
               <h1 className="cta-heading">
                 <div className="d-flex justify-content-center">
-                  <AnimatedNumbers
+                  {/* <AnimatedNumbers
                     includeComma
                     animateToNumber={num}
                     style={{}}
@@ -291,78 +284,46 @@ const App = () => {
                       { mass: 1, tension: 260, friction: 100 },
                       { mass: 1, tension: 210, friction: 180 },
                     ]}
-                  ></AnimatedNumbers>
-                  <p style={{ fontSize: 24, color: '#ff7f29' }}>K</p>
+                  ></AnimatedNumbers> */}
+                  <p style={{ fontSize: 24, color: '#ff7f29' }}>{num} TND</p>
                 </div>
               </h1>
             </div>
           </div>
           <div className="col-lg-3 col-md-4">
             <div className="mt-5 text-center">
-              <p className="cta-text">Years of Experience</p>
+              <p className="cta-text" style={{ fontWeight: 'bold' }}>
+                Levé:
+              </p>
               <h1 className="cta-heading">
                 <div className="d-flex justify-content-center">
-                  <AnimatedNumbers
-                    includeComma
-                    animateToNumber={num}
-                    style={{}}
-                    fontStyle={{
-                      fontSize: 'calc(1.2825rem + .39vw)',
-                      textAlign: 'center',
-                      color: '#ff7f29',
-                    }}
-                    duration={1000}
-                    configs={[
-                      { mass: 1, tension: 220, friction: 100 },
-                      { mass: 1, tension: 180, friction: 130 },
-                      { mass: 1, tension: 280, friction: 90 },
-                      { mass: 1, tension: 180, friction: 135 },
-                      { mass: 1, tension: 260, friction: 100 },
-                      { mass: 1, tension: 210, friction: 180 },
-                    ]}
-                  ></AnimatedNumbers>
-                  <p style={{ fontSize: 24, color: '#ff7f29' }}>K</p>
+                  <p style={{ fontSize: 24, color: '#ff7f29' }}>{leve}</p>
                 </div>
               </h1>
             </div>
           </div>
           <div className="col-lg-3 col-md-4">
             <div className="mt-5 text-center">
-              <p className="cta-text">Emplys</p>
+              <p className="cta-text" style={{ fontWeight: 'bold' }}>
+                Actions libérées
+              </p>
               <h1 className="cta-heading">
                 <div className="d-flex justify-content-center">
-                  <AnimatedNumbers
-                    includeComma
-                    animateToNumber={num}
-                    style={{}}
-                    fontStyle={{
-                      fontSize: 'calc(1.2825rem + .39vw)',
-                      textAlign: 'center',
-                      color: '#ff7f29',
-                    }}
-                    duration={1000}
-                    configs={[
-                      { mass: 1, tension: 220, friction: 100 },
-                      { mass: 1, tension: 180, friction: 130 },
-                      { mass: 1, tension: 280, friction: 90 },
-                      { mass: 1, tension: 180, friction: 135 },
-                      { mass: 1, tension: 260, friction: 100 },
-                      { mass: 1, tension: 210, friction: 180 },
-                    ]}
-                  ></AnimatedNumbers>
-                  <p style={{ fontSize: 24, color: '#ff7f29' }}>K</p>
+                  <p style={{ fontSize: 24, color: '#ff7f29' }}>{action} %</p>
                 </div>
               </h1>
             </div>
           </div>
           <div className="col-lg-3 col-md-4">
             <div className="mt-5 text-center">
-              <p className="cta-text">Happy Clinets</p>
+              <p className="cta-text" style={{ fontWeight: 'bold' }}>
+                Evaluation de la société
+              </p>
               <h1 className="cta-heading">
                 <div className="d-flex justify-content-center">
-                  <AnimatedNumbers
+                  {/* <AnimatedNumbers
                     includeComma
-                    animateToNumber={num}
+                    animateToNumber={evaluation}
                     style={{}}
                     fontStyle={{
                       fontSize: 'calc(1.2825rem + .39vw)',
@@ -378,20 +339,16 @@ const App = () => {
                       { mass: 1, tension: 260, friction: 100 },
                       { mass: 1, tension: 210, friction: 180 },
                     ]}
-                  ></AnimatedNumbers>
-                  <p style={{ fontSize: 24, color: '#ff7f29' }}>K</p>
+                  ></AnimatedNumbers> */}
+                  <p style={{ fontSize: 24, color: '#ff7f29' }}>
+                    {evaluation} TND
+                  </p>
                 </div>
               </h1>
             </div>
           </div>
         </div>
       </div>
-      {/* </section> */}
-
-      {/* progress bar */}
-      {/* <div className="progressBar">
-        <ProgressBar width={500} now={now} message="40%" />
-      </div> */}
 
       <div className="progress progressBar mt-4" style={{ height: 30 }}>
         <div
@@ -406,16 +363,18 @@ const App = () => {
         </div>
       </div>
 
-      <section class="section service-2" id="service">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6">
-              <div class="text-center">
-                <div class="heading">
-                  <h2 class="mb-0">Pourquoi investir à Anath health care:</h2>
-                  <div class="box first"></div>
+      <section className="section service-2" id="service">
+        <div className="container">
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-6">
+              <div className="text-center">
+                <div className="heading">
+                  <h2 className="mb-0">
+                    Pourquoi investir à Anath health care:
+                  </h2>
+                  <div className="box first"></div>
                 </div>
-                <p class="text-muted">
+                <p className="text-muted">
                   4 avantages à avoir suite à un investissement dans une
                   start-up labellisée :
                 </p>
@@ -2599,21 +2558,94 @@ const App = () => {
                           />
                         </div>
                       </div>
+
                       <div className="col-lg-12">
                         <div className="position-relative mb-3">
                           <span className="input-group-text">
                             <i className="mdi mdi-file-document-outline"></i>
                           </span>
                           <input
-                            name="subject"
-                            id="subject"
+                            name="phone"
+                            id="phone"
                             type="text"
                             className="form-control"
-                            placeholder="Subject"
+                            placeholder="Phone Number"
                           />
                         </div>
                       </div>
-                      <div className="col-lg-12">
+
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="exampleRadios"
+                          id="exampleRadios1"
+                          value="option1"
+                        />
+                        <label
+                          className="form-check-label"
+                          style={{ color: 'white' }}
+                          for="exampleRadios1"
+                        >
+                          Default radio
+                        </label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="exampleRadios"
+                          id="exampleRadios2"
+                          value="option2"
+                        />
+                        <label
+                          className="form-check-label"
+                          style={{ color: 'white' }}
+                          for="exampleRadios2"
+                        >
+                          Second default radio
+                        </label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="exampleRadios"
+                          id="exampleRadios3"
+                          value="option3"
+                        />
+                        <label
+                          className="form-check-label"
+                          style={{ color: 'white' }}
+                          for="exampleRadios3"
+                        >
+                          Second default radio
+                        </label>
+                      </div>
+
+                      {/* <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label className="form-check-label" for="flexCheckDefault">
+                          Default checkbox
+                        </label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                        />
+                        <label className="form-check-label" for="flexCheckChecked">
+                          Checked checkbox
+                        </label>
+                      </div> */}
+                      {/* <div className="col-lg-12">
                         <div className="position-relative mb-3">
                           <span className="input-group-text align-items-start">
                             <i className="mdi mdi-comment-text-outline"></i>
@@ -2625,8 +2657,8 @@ const App = () => {
                             className="form-control"
                             placeholder="Enter your message*"
                           ></textarea>
-                        </div>
-                      </div>
+                        </div> 
+                      </div>*/}
                       <div className="col-lg-12">
                         <div className="text-end">
                           <input
@@ -2762,39 +2794,71 @@ const App = () => {
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <img src={actia} className="investorImage" style={{marginTop:"20%",marginBottom:"20%", height:"30%"}} />
+            <img
+              src={actia}
+              className="investorImage"
+              style={{ marginTop: '20%', marginBottom: '20%', height: '30%' }}
+            />
           </div>
           <div className="col-2">
-            <img src={cetem} className="investorImage" style={{height:"150px"}}/>
+            <img
+              src={cetem}
+              className="investorImage"
+              style={{ height: '150px' }}
+            />
           </div>
           <div className="col-2">
             <img src={enim} className="investorImage" />
           </div>
           <div className="col-2">
-            <img src={eniso} className="investorImage"  style={{height:"150px"}}/>
+            <img
+              src={eniso}
+              className="investorImage"
+              style={{ height: '150px' }}
+            />
           </div>
           <div className="col-2">
-            <img src={hopitalMilitaire} className="investorImage"  style={{height:"150px"}}/>
+            <img
+              src={hopitalMilitaire}
+              className="investorImage"
+              style={{ height: '150px' }}
+            />
           </div>
           <div className="col-2">
-            <img src={medecineSfax} className="investorImage" style={{marginTop:"10%",marginBottom:"20%", height:"60%"}}/>
+            <img
+              src={medecineSfax}
+              className="investorImage"
+              style={{ marginTop: '10%', marginBottom: '20%', height: '60%' }}
+            />
           </div>
         </div>
         <div className="row d-flex justify-content-center">
           <div className="col-2">
-            <img src={ministereDeSante} className="investorImage" style={{height:"150px"}}/>
+            <img
+              src={ministereDeSante}
+              className="investorImage"
+              style={{ height: '150px' }}
+            />
           </div>
           <div className="col-2">
-            <img src={novationCity} className="investorImage"/>
+            <img src={novationCity} className="investorImage" />
           </div>
           <div className="col-2">
             <img src={ordreNationaldesMedecins} className="investorImage" />
           </div>
           <div className="col-2">
-            <img src={sofap} className="investorImage" style={{marginTop:"10%",marginBottom:"20%", height:"60%"}}/>
+            <img
+              src={sofap}
+              className="investorImage"
+              style={{ marginTop: '10%', marginBottom: '20%', height: '60%' }}
+            />
           </div>
           <div className="col-2">
-            <img src={unimed} className="investorImage" style={{marginTop:"10%",marginBottom:"20%", height:"60%"}} />
+            <img
+              src={unimed}
+              className="investorImage"
+              style={{ marginTop: '10%', marginBottom: '20%', height: '60%' }}
+            />
           </div>
         </div>
       </div>
@@ -2815,16 +2879,7 @@ const App = () => {
         </div>
       </div>
 
-      <button
-        onclick={topFunction}
-        className="btn btn-primary"
-        id="back-to-top"
-      >
-        {/* <i className="mdi mdi-arrow-up"></i>  */}
-        {/* <i className="bi bi-arrow-up"></i> */}
-        {/* <i className="fa-solid fa-circle-arrow-up"></i> */}
-        <FontAwesomeIcon />
-      </button>
+  
     </div>
   )
 }
