@@ -1,0 +1,29 @@
+.firstImage{
+  background-image: url("../public/assets/images/home-bg.png");
+}
+
+.mediwaveVideo{
+  width: 100%;
+}
+
+.buttonStyle{
+  z-index: 9999;
+}
+
+.numberStyle{
+  background-color: red;
+}
+
+.carouselText{
+  
+}
+
+.progressBar{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.investorImage{
+  width: 100%
+}
